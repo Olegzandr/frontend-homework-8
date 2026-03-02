@@ -1,0 +1,627 @@
+/* =====================================================
+   FreshMeal - Стили для многостраничного сайта
+   ===================================================== */
+
+:root {
+    --primary-color: #00d1b2;
+    --secondary-color: #3273dc;
+    --text-dark: #363636;
+    --text-light: #7a7a7a;
+    --bg-light: #f5f5f5;
+    --border-color: #e8e8e8;
+}
+
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* =====================================================
+   Навигация
+   ===================================================== */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.navbar-brand {
+    padding: 0.75rem 1rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-left: 0.5rem;
+}
+
+.navbar-item {
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+    color: var(--primary-color);
+}
+
+.navbar-item.is-active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar-end {
+    margin-left: auto;
+}
+
+/* =====================================================
+   Кнопки
+   ===================================================== */
+.button {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.button.is-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button.is-primary:hover {
+    background-color: #00b89e;
+    box-shadow: 0 4px 12px rgba(0, 209, 178, 0.3);
+    transform: translateY(-2px);
+}
+
+.button.is-info {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.button.is-info:hover {
+    background-color: #2366d1;
+    box-shadow: 0 4px 12px rgba(50, 115, 220, 0.3);
+}
+
+.button.is-light {
+    background-color: white;
+    color: var(--text-dark);
+    border: 2px solid white;
+}
+
+.button.is-light:hover {
+    background-color: var(--bg-light);
+    border-color: var(--bg-light);
+}
+
+/* =====================================================
+   Герой-секция
+   ===================================================== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.hero.is-light {
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    color: var(--text-dark);
+}
+
+.hero .title,
+.hero .subtitle {
+    color: inherit;
+}
+
+.hero-body {
+    padding: 6rem 1.5rem;
+}
+
+/* =====================================================
+   Секции
+   ===================================================== */
+.section {
+    padding: 4rem 1.5rem;
+}
+
+.section.is-light {
+    background-color: var(--bg-light);
+}
+
+.section.is-info {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.section.is-info .box {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+}
+
+/* =====================================================
+   Типография
+   ===================================================== */
+.title {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.content {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ol,
+.content ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+/* =====================================================
+   Коробки и карточки
+   ===================================================== */
+.box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.box:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+}
+
+.card-footer-item {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+.card-footer-item:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+/* =====================================================
+   Иконки
+   ===================================================== */
+.icon-box {
+    margin-bottom: 1rem;
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon.is-large {
+    width: 4rem;
+    height: 4rem;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* =====================================================
+   Формы
+   ===================================================== */
+.form-feedback .field {
+    margin-bottom: 1.5rem;
+}
+
+.form-feedback .label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.form-feedback .input,
+.form-feedback .textarea,
+.form-feedback .select select {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-feedback .input:focus,
+.form-feedback .textarea:focus,
+.form-feedback .select select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 209, 178, 0.1);
+    outline: none;
+}
+
+.form-feedback .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.form-feedback .checkbox input {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+/* =====================================================
+   FAQ элементы
+   ===================================================== */
+.faq-item {
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.faq-item .title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.faq-item .content {
+    margin-bottom: 0;
+}
+
+/* =====================================================
+   Уровни (Level)
+   ===================================================== */
+.level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.level-item {
+    flex: 1;
+}
+
+.level-left,
+.level-right {
+    display: flex;
+    align-items: center;
+}
+
+.level-left {
+    margin-right: auto;
+}
+
+.level-right {
+    margin-left: auto;
+}
+
+/* =====================================================
+   Столбцы (Columns)
+   ===================================================== */
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.75rem;
+}
+
+.column {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 0.75rem;
+}
+
+.column.is-half {
+    flex: 0 0 50%;
+}
+
+.column.is-one-third {
+    flex: 0 0 33.333%;
+}
+
+.column.is-two-thirds {
+    flex: 0 0 66.666%;
+}
+
+.column.is-4 {
+    flex: 0 0 33.333%;
+}
+
+.column.is-6 {
+    flex: 0 0 50%;
+}
+
+.column.is-8 {
+    flex: 0 0 66.666%;
+}
+
+.column.is-offset-2 {
+    margin-left: 16.666%;
+}
+
+.is-vcentered {
+    display: flex;
+    align-items: center;
+}
+
+.is-multiline {
+    flex-wrap: wrap;
+}
+
+/* =====================================================
+   Утилиты
+   ===================================================== */
+.has-text-centered {
+    text-align: center;
+}
+
+.has-text-white {
+    color: white;
+}
+
+.has-text-grey {
+    color: var(--text-light);
+}
+
+.has-text-weight-bold {
+    font-weight: 700;
+}
+
+.is-fullheight-with-navbar {
+    min-height: calc(100vh - 3.25rem);
+}
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 2.5rem; }
+.mb-6 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 2.5rem; }
+.mt-6 { margin-top: 3rem; }
+
+/* =====================================================
+   Анимации
+   ===================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box, .card {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* =====================================================
+   Футер
+   ===================================================== */
+.footer {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 3rem 1.5rem;
+}
+
+.footer .title,
+.footer .subtitle {
+    color: white;
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer hr {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* =====================================================
+   Адаптивный дизайн (Планшеты)
+   ===================================================== */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-menu.is-active {
+        display: block;
+    }
+
+    .navbar-item {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .column {
+        flex: 0 0 100%;
+    }
+
+    .column.is-half,
+    .column.is-one-third,
+    .column.is-two-thirds,
+    .column.is-4,
+    .column.is-6,
+    .column.is-8 {
+        flex: 0 0 100%;
+    }
+
+    .column.is-offset-2 {
+        margin-left: 0;
+    }
+
+    .hero-body {
+        padding: 3rem 1.5rem;
+    }
+
+    .section {
+        padding: 2rem 1.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .level.is-mobile {
+        flex-direction: column;
+    }
+
+    .level-item {
+        margin-bottom: 1rem;
+    }
+}
+
+/* =====================================================
+   Адаптивный дизайн (Мобильные устройства)
+   ===================================================== */
+@media screen and (max-width: 480px) {
+    .title.is-1 {
+        font-size: 2rem;
+    }
+
+    .title.is-2 {
+        font-size: 1.75rem;
+    }
+
+    .title.is-3 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle.is-4 {
+        font-size: 1rem;
+    }
+
+    .box {
+        padding: 1.5rem;
+    }
+
+    .hero-body {
+        padding: 2rem 1rem;
+    }
+
+    .section {
+        padding: 1.5rem 1rem;
+    }
+
+    .navbar-brand {
+        padding: 0.5rem;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .icon.is-large {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .columns {
+        margin: -0.5rem;
+    }
+
+    .column {
+        padding: 0.5rem;
+    }
+}
+
+/* =====================================================
+   Печать
+   ===================================================== */
+@media print {
+    .navbar,
+    .footer,
+    .button {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+}

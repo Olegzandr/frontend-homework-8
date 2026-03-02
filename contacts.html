@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты и обратная связь | FreshMeal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Хедер с навигацией -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-leaf"></i>
+                    </span>
+                    <span class="logo-text">FreshMeal</span>
+                </span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="index.html">Главная</a>
+                <a class="navbar-item" href="contacts.html">Контакты</a>
+                <a class="navbar-item" href="faq.html">FAQ</a>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="#order">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="hero is-medium is-info">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">Контакты и обратная связь</h1>
+                <p class="subtitle is-4">Мы всегда готовы помочь вам</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <!-- Форма обратной связи -->
+                <div class="column is-6">
+                    <h2 class="title is-3">Оставьте отзыв</h2>
+                    <form class="form-feedback" action="mailto:info@freshmeal.ru" method="POST" enctype="text/plain">
+                        <div class="field">
+                            <label class="label">Имя</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Ваше имя" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="example@email.com" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Тема</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select name="subject" required>
+                                        <option value="" disabled selected>Выберите тему</option>
+                                        <option value="Предложение">Предложение</option>
+                                        <option value="Жалоба">Жалоба</option>
+                                        <option value="Вопрос">Вопрос</option>
+                                        <option value="Благодарность">Благодарность</option>
+                                        <option value="Другое">Другое</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Сообщение</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Ваше сообщение..." name="message" rows="5" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="consent" required>
+                                    Согласен на обработку персональных данных
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary is-fullwidth" type="submit">Отправить отзыв</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Контактная информация -->
+                <div class="column is-6">
+                    <h2 class="title is-3">Контакты</h2>
+                    <div class="content">
+                        <div class="box">
+                            <p>
+                                <span class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </span>
+                                <strong>Адрес:</strong><br>
+                                г. Москва, ул. Здоровья, д. 1, офис 101
+                            </p>
+                        </div>
+
+                        <div class="box">
+                            <p>
+                                <span class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <strong>Телефон:</strong><br>
+                                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                            </p>
+                        </div>
+
+                        <div class="box">
+                            <p>
+                                <span class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:info@freshmeal.ru">info@freshmeal.ru</a>
+                            </p>
+                        </div>
+
+                        <div class="box">
+                            <p>
+                                <span class="icon">
+                                    <i class="fas fa-clock"></i>
+                                </span>
+                                <strong>Время работы:</strong><br>
+                                Пн-Пт: 9:00 - 20:00<br>
+                                Сб-Вс: 10:00 - 18:00
+                            </p>
+                        </div>
+
+                        <h3 class="title is-5 mt-5">Следите за нами в соцсетях</h3>
+                        <div class="buttons">
+                            <a class="button is-info" href="https://instagram.com" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-instagram"></i>
+                                </span>
+                                <span>Instagram</span>
+                            </a>
+                            <a class="button is-info" href="https://telegram.org" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-telegram"></i>
+                                </span>
+                                <span>Telegram</span>
+                            </a>
+                            <a class="button is-info" href="https://vk.com" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-vk"></i>
+                                </span>
+                                <span>VK</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Заказ" -->
+    <section class="section is-info" id="order">
+        <div class="container">
+            <div class="box">
+                <h2 class="title is-2 has-text-centered has-text-white">Готовы начать?</h2>
+                <p class="subtitle is-5 has-text-centered has-text-white mb-5">
+                    Первый заказ со скидкой 20%. Используйте код: FRESH20
+                </p>
+                <div class="buttons is-centered">
+                    <a class="button is-large is-light" href="tel:+79991234567">
+                        <span class="icon">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                        <span>Позвонить нам</span>
+                    </a>
+                    <a class="button is-large is-light" href="mailto:info@freshmeal.ru">
+                        <span class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span>Отправить письмо</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <div class="columns">
+                <div class="column">
+                    <h3 class="title is-5">Контакты</h3>
+                    <p>
+                        <strong>Телефон:</strong> +7 (999) 123-45-67<br>
+                        <strong>Email:</strong> <a href="mailto:info@freshmeal.ru">info@freshmeal.ru</a><br>
+                        <strong>Адрес:</strong> г. Москва, ул. Здоровья, д. 1
+                    </p>
+                </div>
+                <div class="column">
+                    <h3 class="title is-5">Следите за нами</h3>
+                    <div class="buttons is-centered">
+                        <a class="button is-rounded is-small is-info" href="https://instagram.com" target="_blank">
+                            <span class="icon">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                        <a class="button is-rounded is-small is-info" href="https://telegram.org" target="_blank">
+                            <span class="icon">
+                                <i class="fab fa-telegram"></i>
+                            </span>
+                        </a>
+                        <a class="button is-rounded is-small is-info" href="https://vk.com" target="_blank">
+                            <span class="icon">
+                                <i class="fab fa-vk"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-5">Информация</h3>
+                    <p>
+                        <a href="index.html">Главная</a><br>
+                        <a href="contacts.html">Контакты</a><br>
+                        <a href="faq.html">FAQ</a>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <p>
+                <strong>FreshMeal</strong> © 2025. Все права защищены.<br>
+                Разработано с <span class="icon is-small"><i class="fas fa-heart has-text-danger"></i></span> для вашего здоровья.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
