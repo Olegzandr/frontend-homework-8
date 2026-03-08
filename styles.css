@@ -629,3 +629,8 @@ body {
         page-break-inside: avoid;
     }
 }
+
+#order .title,
+#order .subtitle {
+    color: #2b2d31 !important;
+}
