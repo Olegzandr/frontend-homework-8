@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Хедер с навигацией -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
@@ -35,7 +34,6 @@
         </div>
     </nav>
 
-    <!-- Герой-секция -->
     <section class="hero is-medium is-info">
         <div class="hero-body">
             <div class="container has-text-centered">
@@ -45,34 +43,70 @@
         </div>
     </section>
 
-    <!-- Основной контент -->
     <section class="section">
         <div class="container">
             <div class="columns is-vcentered">
-                <!-- Форма обратной связи -->
                 <div class="column is-6">
                     <h2 class="title is-3">Оставьте отзыв</h2>
-                    <form class="form-feedback" action="mailto:info@freshmeal.ru" method="POST" enctype="text/plain">
+
+                    <form id="feedbackForm" class="form-feedback">
                         <div class="field">
-                            <label class="label">Имя</label>
+                            <label class="label" for="fullname">
+                                ФИО <span class="has-text-danger">*</span>
+                            </label>
                             <div class="control">
-                                <input class="input" type="text" placeholder="Ваше имя" name="name" required>
+                                <input
+                                    class="input"
+                                    type="text"
+                                    id="fullname"
+                                    name="fullname"
+                                    placeholder="Иванов Иван Иванович"
+                                    required
+                                >
                             </div>
+                            <p class="help" id="fullnameHelp">Введите фамилию и имя минимум из 2 слов</p>
                         </div>
 
                         <div class="field">
-                            <label class="label">Email</label>
+                            <label class="label" for="phone">
+                                Телефон <span class="has-text-danger">*</span>
+                            </label>
                             <div class="control">
-                                <input class="input" type="email" placeholder="example@email.com" name="email" required>
+                                <input
+                                    class="input"
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+7 (999) 123-45-67"
+                                    required
+                                >
                             </div>
+                            <p class="help" id="phoneHelp">Введите не менее 10 цифр номера</p>
                         </div>
 
                         <div class="field">
-                            <label class="label">Тема</label>
+                            <label class="label" for="email">
+                                Email <span class="has-text-danger">*</span>
+                            </label>
+                            <div class="control">
+                                <input
+                                    class="input"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="example@email.com"
+                                    required
+                                >
+                            </div>
+                            <p class="help" id="emailHelp">Введите корректный email</p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="subject">Тема</label>
                             <div class="control">
                                 <div class="select is-fullwidth">
-                                    <select name="subject" required>
-                                        <option value="" disabled selected>Выберите тему</option>
+                                    <select id="subject" name="subject">
+                                        <option value="" selected>Выберите тему</option>
                                         <option value="Предложение">Предложение</option>
                                         <option value="Жалоба">Жалоба</option>
                                         <option value="Вопрос">Вопрос</option>
@@ -84,30 +118,44 @@
                         </div>
 
                         <div class="field">
-                            <label class="label">Сообщение</label>
+                            <label class="label" for="message">Сообщение</label>
                             <div class="control">
-                                <textarea class="textarea" placeholder="Ваше сообщение..." name="message" rows="5" required></textarea>
+                                <textarea
+                                    class="textarea"
+                                    id="message"
+                                    name="message"
+                                    placeholder="Ваше сообщение..."
+                                    rows="5"
+                                    maxlength="500"
+                                ></textarea>
                             </div>
+                            <p class="help" id="messageHelp">До 500 символов</p>
                         </div>
 
                         <div class="field">
                             <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="consent" required>
+                                <label class="checkbox" for="agreement">
+                                    <input type="checkbox" id="agreement" name="agreement" required>
                                     Согласен на обработку персональных данных
                                 </label>
                             </div>
                         </div>
 
-                        <div class="field">
-                            <div class="control">
-                                <button class="button is-primary is-fullwidth" type="submit">Отправить отзыв</button>
+                        <div class="field is-grouped">
+                            <div class="control is-expanded">
+                                <button class="button is-primary is-fullwidth" type="submit">
+                                    Отправить отзыв
+                                </button>
+                            </div>
+                            <div class="control is-expanded">
+                                <button class="button is-light is-fullwidth" type="reset">
+                                    Очистить
+                                </button>
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <!-- Контактная информация -->
                 <div class="column is-6">
                     <h2 class="title is-3">Контакты</h2>
                     <div class="content">
@@ -179,7 +227,6 @@
         </div>
     </section>
 
-    <!-- Секция "Заказ" -->
     <section class="section is-info" id="order">
         <div class="container">
             <div class="box">
@@ -205,7 +252,6 @@
         </div>
     </section>
 
-    <!-- Футер -->
     <footer class="footer">
         <div class="content has-text-centered">
             <div class="columns">
@@ -253,5 +299,8 @@
             </p>
         </div>
     </footer>
+
+    <script src="validation.js"></script>
+    <script src="consoleLogger.js"></script>
 </body>
 </html>
